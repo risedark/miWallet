@@ -1,0 +1,2 @@
+# miWallet
+ Exodia Wallet layout
