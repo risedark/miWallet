@@ -1,0 +1,72 @@
+@import url(/fonts.css);
+html {
+  --backgroudColor: linear-gradient(180deg, #0f86e2 0%, #2497f0 100%);
+  --markupColor: #0cabef;
+  --backgroundObject: white;
+  font-size: 10px;
+  --hoverColor: #8d72e1;
+  --primaryButtonColor: #86d26c;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: var(--fontColor);
+  font-family: var(--mainFont);
+  background: var(--backgroudColor);
+}
+#appName {
+  color: var(--fontColor);
+  font-weight: bold;
+  font-size: 2.4rem;
+  padding-left: 1.2rem;
+}
+input {
+  padding: 0.2rem;
+  padding-left: 1rem;
+  width: 100%;
+  height: 6rem;
+  background: #fcf4f4;
+  border-radius: 1.5rem;
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: var(--secondaryFontColor);
+  border: transparent;
+}
+
+footer {
+  position: absolute;
+  bottom: 0%;
+  margin-top: -200px;
+  padding-left: 1rem;
+}
+footer p {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--fontColor);
+}
+.primaryButton {
+  background: var(--primaryButtonColor);
+  font-family: var(--mainFont);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--fontColor);
+  border-radius: 1rem;
+  border: 4px solid transparent;
+}
+.primaryButton:hover {
+  cursor: pointer;
+  border-color: #8d72e1;
+}
+label {
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--secondaryFontColor);
+}

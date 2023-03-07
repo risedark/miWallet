@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./fonts.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./add-transaction.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <title>Mi Wallet - Agregar Transaccion</title>
+  </head>
+  <body>
+    <header id="appName">
+      <button><img src="./assets/icon/backArrow.webp" /></button>
+      <p>MiWallet</p>
+      <button><img src="./assets/icon/profileIcon.webp" /></button>
+    </header>
+    <div class="transactionCard">
+      <p>Registrar Nueva Transacción</p>
+      <form>
+        <div class="form-floating mb-3">
+          <input
+            type="date"
+            class="form-control"
+            aria-placeholder="Fecha de Transaccion"
+          />
+          <label for="date">Fecha de Transaccion</label>
+        </div>
+        <div class="form-floating mb-3">
+          <select id="account" class="form-select">
+            <option selected disabled>Seleccione una cuenta</option>
+            <option>Bancolombia</option>
+            <option>Deel</option>
+          </select>
+          <label for="account">Cuenta</label>
+        </div>
+        <div class="form-floating mb-3">
+          <select class="form-select" id="category">
+            <option selected disabled>Seleccione una categoria</option>
+            <option>Comida</option>
+            <option>Servicios</option>
+            <option>Arriendo</option>
+            <option>Ocio</option>
+            <option>Trabajo</option>
+            <option>Hogar</option>
+          </select>
+          <label for="category">Categoria</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="number"
+            id="balance"
+            class="form-control"
+            placeholder="Saldo"
+          />
+          <label for="balance">Saldo</label>
+        </div>
+      </form>
+      <button id="submitButton" class="primaryButton">Registrar</button>
+    </div>
+    <footer>
+      <p id="version">Actualmente estamos en la version: 0.0.1</p>
+    </footer>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"
+  ></script>
+</html>
