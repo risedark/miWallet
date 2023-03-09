@@ -16,9 +16,15 @@
   </head>
   <body>
     <header id="appName">
-      <button><img src="./assets/icon/backArrow.webp" /></button>
-      <p>MiWallet</p>
-      <button><img src="./assets/icon/profileIcon.webp" /></button>
+      <div id="navigation">
+        <button><img src="./assets/icon/backArrow.webp" /></button>
+        <p>MiWallet</p>
+        <button><img src="./assets/icon/profileIcon.webp" /></button>
+      </div>
+      <div id="locationContainer">
+        <p id="locationLegend">Te encuentras en:</p>
+        <p id="location">Agregar Transaccion</p>
+      </div>
     </header>
     <div class="transactionCard">
       <p>Registrar Nueva Transacción</p>
@@ -34,7 +40,9 @@
         <div class="form-floating mb-3">
           <select id="account" class="form-select">
             <option selected disabled>Seleccione una cuenta</option>
-            <option>Bancolombia</option>
+            <option>Bancolombia (Debit Card)</option>
+            <option>Bancolombia (E-Card)</option>
+            <option>Paypal</option>
             <option>Deel</option>
           </select>
           <label for="account">Cuenta</label>
@@ -45,20 +53,21 @@
             <option>Comida</option>
             <option>Servicios</option>
             <option>Arriendo</option>
-            <option>Ocio</option>
+            <option>Entretenimiento</option>
             <option>Trabajo</option>
             <option>Hogar</option>
+            <option>Prestamo</option>
           </select>
           <label for="category">Categoria</label>
         </div>
-        <div class="form-floating mb-3">
+        <div class="form-floating mb-3 balance">
           <input
             type="number"
-            id="balance"
+            id="balances"
             class="form-control"
             placeholder="Saldo"
           />
-          <label for="balance">Saldo</label>
+          <label for="balances">Saldo</label>
         </div>
       </form>
       <button id="submitButton" class="primaryButton">Registrar</button>

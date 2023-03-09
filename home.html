@@ -8,7 +8,145 @@
     <link rel="stylesheet" href="home.css" />
   </head>
   <body>
-    <header id="appName">MiWallet</header>
+    <header id="appName">
+      <div id="navigation">
+        <p>MiWallet</p>
+        <a href="/add-transaction.html">
+          <button class="primaryButton" id="add-transaction">AGREGAR</button>
+        </a>
+        <button><img src="./assets/icon/profileIcon.webp" /></button>
+      </div>
+    </header>
+    <div id="metricsContainer">
+      <div class="categoryMetricsCard card metrics">
+        <p class="subtitle">Gastos del mes por categoria</p>
+        <div class="expenseContainer">
+          <img
+            class="chart"
+            src="./assets/img/categoryChart.webp"
+            alt="grafico por categoria"
+          />
+          <div>
+            <p class="mainExpense">1. Comida<br /><span>500.000 COP</span></p>
+            <p class="expense">
+              2. Servicio Luz / Electricidad<br /><span>250.000 COP</span>
+            </p>
+            <p class="expense">
+              3. Entretenimiento<br /><span>250.000 COP</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="transactionFeedCard card">
+        <div id="transactionNav">
+          <p class="subtitle">Historial de transacciones</p>
+          <button class="terciaryButton">VER TRANSACCIONES</button>
+        </div>
+        <div id="transactionFeed">
+          <div class="transaction debit">
+            <p class="balanceMov">ENTRADA</p>
+            <time>17 de mayo</time>
+            <img
+              class="logo"
+              src="./assets/icon/paypal-icon.webp"
+              alt="paypal-icon"
+            />
+            <p class="accountTrans">Paypal</p>
+            <p class="categoryTrans">Prestamo</p>
+            <p class="subCategory"></p>
+            <p class="amountTrans">35.000 COP</p>
+          </div>
+          <div class="transaction credit">
+            <p class="balanceMov">SALIDA</p>
+            <time>15 de mayo</time>
+            <img
+              class="logo"
+              src="./assets/icon/bank-icon.webp"
+              alt="bank-icon"
+            />
+            <p class="accountTrans">Bancolombia</p>
+            <p class="categoryTrans">Comida</p>
+            <p class="subCategory">E-CARD</p>
+            <p class="amountTrans">270.000 COP</p>
+          </div>
+          <div class="transaction credit">
+            <p class="balanceMov">SALIDA</p>
+            <time>14 de mayo</time>
+            <img
+              class="logo"
+              src="./assets/icon/bank-icon.webp"
+              alt="bank-icon"
+            />
+            <p class="accountTrans">Bancolombia</p>
+            <p class="categoryTrans">Entretenimiento</p>
+            <p class="subCategory">MASTERCARD (5403)</p>
+            <p class="amountTrans">63.650 COP</p>
+          </div>
+          <div class="transaction debit">
+            <p class="balanceMov">ENTRADA</p>
+            <time>13 de mayo</time>
+            <img
+              class="logo"
+              src="./assets/icon/paypal-icon.webp"
+              alt="paypal-icon"
+            />
+            <p class="accountTrans">Paypal</p>
+            <p class="categoryTrans">Prestamo</p>
+            <p class="subCategory"></p>
+            <p class="amountTrans">35.000 COP</p>
+          </div>
+          <div class="transaction credit">
+            <p class="balanceMov">SALIDA</p>
+            <time>12 de mayo</time>
+            <img
+              class="logo"
+              src="./assets/icon/bank-icon.webp"
+              alt="bank-icon"
+            />
+            <p class="accountTrans">Bancolombia</p>
+            <p class="categoryTrans">Comida</p>
+            <p class="subCategory">E-CARD</p>
+            <p class="amountTrans">270.000 COP</p>
+          </div>
+          <div class="transaction credit">
+            <p class="balanceMov">SALIDA</p>
+            <time>12 de mayo</time>
+            <img
+              class="logo"
+              src="./assets/icon/bank-icon.webp"
+              alt="bank-icon"
+            />
+            <p class="accountTrans">Bancolombia</p>
+            <p class="categoryTrans">Entretenimiento</p>
+            <p class="subCategory">MASTERCARD (5403)</p>
+            <p class="amountTrans">63.650 COP</p>
+          </div>
+        </div>
+      </div>
+      <div class="accountMetricsCard card metrics">
+        <p class="subtitle">Gastos del mes por cuenta</p>
+        <div class="expenseContainer">
+          <img
+            class="chart"
+            src="./assets/img/accountChart.webp"
+            alt="grafico por cuenta"
+          />
+          <div>
+            <p class="mainExpense">
+              1. Bancolombia (Debit Card)<br /><span>500.000 COP</span>
+            </p>
+            <p class="expense">
+              2. Bancolombia (E-Card)<br /><span>250.000 COP</span>
+            </p>
+            <p class="expense">3. Paypal<br /><span>250.000 COP</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="currencyContainer">
+      <p id="currency">Moneda Predeterminada</p>
+      <button id="changeCurrency" class="terciaryButton">COP</button>
+    </div>
     <footer>
       <p id="version">Actualmente estamos en la version: 0.0.1</p>
     </footer>

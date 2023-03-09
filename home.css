@@ -1,0 +1,213 @@
+* {
+  font-family: var(--mainFont);
+}
+html {
+  font-size: 10px;
+}
+#metricsContainer {
+  display: grid;
+  width: 70%;
+  height: 80%;
+  grid-template-areas:
+    "category transaction"
+    "account transaction"
+    " . transaction";
+  grid-template-rows: 1fr 1fr 0.5fr;
+  grid-template-columns: 1fr 1.5fr;
+  margin: auto;
+}
+.card {
+  background-color: var(--backgroundObject);
+  border: 1.5rem;
+  gap: 2rem;
+  padding: 3.2rem;
+  padding-top: 0;
+  border-radius: 1.5rem;
+  border: 1.6rem;
+  margin: auto;
+  width: 95%;
+  height: 95%;
+  color: var(--secondaryFontColor);
+}
+.card .subtitle {
+  font-weight: 400;
+  font-size: 16px;
+}
+.categoryMetricsCard {
+  grid-area: category;
+}
+
+.accountMetricsCard {
+  grid-area: account;
+}
+.metrics span {
+  margin-left: 1rem;
+  font-weight: 400;
+  font-size: 14px;
+}
+.chart {
+  width: 40%;
+  min-width: 115px;
+}
+.metrics .mainExpense {
+  font-weight: 700;
+  font-size: 14px;
+}
+.metrics .expense {
+  font-weight: 300;
+  font-size: 14px;
+}
+.expenseContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.transactionFeedCard {
+  grid-area: transaction;
+  height: 98.4%;
+}
+#transactionNav {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+#transactionNav button {
+  color: var(--secondaryFontColor);
+  border: 0.5px solid var(--secondaryFontColor);
+  font-weight: 900;
+  font-size: 13px;
+}
+#transactionNav button:hover {
+  border-color: var(--markupColor);
+}
+#transactionFeed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.transaction {
+  display: grid;
+  grid-template-areas:
+    "balanceMov . . time"
+    "logo accountTrans categoryTrans amountTrans"
+    "logo subCategory . amountTrans";
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  grid-template-rows: 16px 32px 16px;
+  color: var(--secondaryFontColor);
+  width: 100%;
+  height: 64px;
+  border: 0;
+  padding: 0;
+}
+.transaction * {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.debit {
+  background-color: rgba(157, 208, 91, 0.15);
+  border-radius: 0.5rem;
+}
+.credit {
+  background-color: rgba(251, 18, 3, 0.15);
+  border-radius: 0.5rem;
+}
+.balanceMov {
+  grid-area: balanceMov;
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: left;
+  top: 20%;
+  left: 8%;
+}
+.transaction time {
+  grid-area: time;
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: right;
+  top: 20%;
+  right: 3%;
+}
+.logo {
+  grid-area: logo;
+  width: 3rem;
+  height: 3rem;
+  left: 8%;
+}
+.accountTrans {
+  grid-area: accountTrans;
+  font-weight: 300;
+  font-size: 1.5rem;
+  text-align: left;
+  top: 15%;
+}
+.categoryTrans {
+  grid-area: categoryTrans;
+  font-weight: 300;
+  font-size: 1.3rem;
+  text-align: center;
+  top: 15%;
+}
+.amountTrans {
+  grid-area: amountTrans;
+  font-weight: 300;
+  font-size: 3rem;
+  text-align: right;
+  bottom: -20%;
+  right: 3%;
+}
+.subCategory {
+  grid-area: subCategory;
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: left;
+  top: -70%;
+}
+#currencyContainer {
+  position: absolute;
+  bottom: 5%;
+  margin-top: -200px;
+  padding-left: 1rem;
+}
+#currencyContainer p {
+  font-weight: 300;
+  font-size: 12px;
+}
+@media (max-width: 1250px) {
+  body {
+    height: 200%;
+  }
+  #currencyContainer {
+    bottom: -95%;
+  }
+  footer {
+    bottom: -100%;
+  }
+  #metricsContainer {
+    grid-template-areas:
+      "category"
+      "account"
+      "transaction";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    width: 50%;
+    min-width: 525px;
+  }
+}
+@media (max-width: 550px) {
+  html {
+    font-size: 4px;
+  }
+  #metricsContainer {
+    min-width: 30%;
+  }
+  .chart {
+    min-width: 70px;
+  }
+}

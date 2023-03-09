@@ -1,10 +1,5 @@
 @import url(/styles.css);
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-right: 1rem;
-}
+
 * {
   font-family: var(--mainFont);
 }
@@ -33,6 +28,22 @@ header {
   font-size: 1.6rem;
   color: var(--secondaryFontColor);
   border: transparent;
+}
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+}
+.balance {
+  align-self: flex-end;
+  width: 50%;
+}
+#balances {
+  background-image: url(./assets/icon/plusIcon.webp);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 97%;
+  background-size: 10%;
 }
 #date {
   height: 12rem;
